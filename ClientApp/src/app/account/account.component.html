@@ -1,0 +1,24 @@
+<div class="container animate animated fadeIn" style="padding:1em" *ngIf="this.loaded==false" style="text-align:center">
+  <div class="spinner-border" role="status" style="text-align:center; margin-top:15em">
+  </div>
+  <h5 style="margin-top:2em">Retrieving data from Blockchain...</h5>
+</div>
+
+
+<div class="container" style="padding:1em" *ngIf="this.loaded==true">
+
+  <div class="card animate animated fadeIn" style="margin-top:2em; text-align:center">
+    <div class="card-header">
+      <h5 class="" style="color:#999; padding-top:10px">Your Account Balance</h5>
+    </div>
+    <div class="card-body">
+      <h4 style="display:inline;" *ngIf="model.balance">Tokennn </h4>
+      <h5 style="display:inline" *ngIf="!model.balance">Retrieving...</h5>
+      <h1 style="display:inline" *ngIf="model.balance">{{ model.balance }}</h1>
+      <br/><br/>
+      <h6 style="display:inline; color:#000" *ngIf="model.account != ''">Public Key: </h6>
+      <h6 style="display:inline; color:#999" *ngIf="model.account != ''">{{ model.account }} <i class="fa fa-clone" aria-hidden="true"></i></h6>
+    </div>
+  </div>
+
+</div>

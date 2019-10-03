@@ -1,0 +1,73 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+p, h6, h5, input, a, td, th, label, .btn  {
+  font-family: 'Noto+Sans+JP', sans-serif;
+  letter-spacing: 0.7px;
+  /* font-weight:bold; */
+}
+
+td {
+  color:#999;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Libre Baskerville', serif;
+}
+
+
+.card-header {
+  background-color:#fff;
+  border:0;
+}
+
+.card {
+  -webkit-box-shadow: 0px 0px 10px -7px rgba(0,0,0,0.5);
+}
+
+.btn {
+  border-radius:3px;
+  border:0px;
+  -webkit-box-shadow: 0px 0px 10px -7px rgba(0,0,0,0.5) !important;
+}
+
+.hover-line:hover {
+  text-decoration: underline;
+}
+
+.hover-grey:hover {
+  color: #fff;
+  background-color:#000;
+}
+
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+::-webkit-scrollbar-corner {
+  background: rgba(0,0,0,0);
+}
+
+::-webkit-scrollbar {
+  width: 1em;
+  height: 1em;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}

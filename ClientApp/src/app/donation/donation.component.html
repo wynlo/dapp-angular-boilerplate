@@ -1,0 +1,54 @@
+<div class="container animate animated fadeIn" style="padding:1em" *ngIf="this.loaded==false" style="text-align:center">
+  <div class="spinner-border" role="status" style="text-align:center; margin-top:15em">
+  </div>
+  <h5 style="margin-top:2em">Retrieving data from Blockchain...</h5>
+</div>
+
+
+<div class="container" style="padding:1em" *ngIf="this.loaded == true">
+
+  <div class="card animate animated fadeIn" style="margin-top:2em; text-align:center">
+    <div class="card-header">
+      <h5 class="" style="color:#999; padding-top:10px">Number of Donors Registered To Date</h5>
+    </div>
+    <div class="card-body">
+      <h1>{{ this.donorCount }} </h1>
+    </div>
+  </div>
+
+
+  <div class="card animate animated fadeIn" style="margin-top:2em; text-align:center">
+    <div class="card-header">
+      <h5 class="" style="color:#999; padding-top:10px">Register as a Donor</h5>
+    </div>
+    <div class="card-body">
+      <button type="submit" class="btn btn-block btn-secondary" (click)="registerDonor()" *ngIf="this.model.account.isDonor == false">Register</button>
+      <h6 *ngIf="this.model.account.isDonor == true">You have already registered as a donor.</h6>
+    </div>
+  </div>
+
+  <div class="card animate animated fadeIn" style="margin-top:2em; text-align:center" *ngIf="this.model.account.isDonor == true">
+    <div class="card-header">
+      <h5 class="" style="color:#999; padding-top:10px">Donate to an Address</h5>
+    </div>
+    <div class="card-body">
+        <form>
+          <div class="form-row">
+            <div class="col">
+              <label for="receiverAddr">Beneficiary's address</label>
+              <input type="text" class="form-control" [(ngModel)]="receiverAddr" name="receiverAddr" placeholder="Enter Public Key">
+            </div>
+            <div class="col">
+              <label for="receiverAddr">Amount to send (In TKN)</label>
+              <input type="number" class="form-control" [(ngModel)]="sendAmt" name="sendAmt" placeholder="Enter Amount in ETH">
+            </div>
+          </div>
+          <br/>
+        <button type="submit" class="btn btn-secondary btn-block" (click)="sendToken()">Submit (Your balance: {{ model.account.balance }}) TKN</button>
+      </form>
+    </div>
+  </div>
+
+
+
+</div>
